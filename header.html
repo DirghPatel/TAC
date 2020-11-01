@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAC CONNECT - Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            position: relative;
+            background: url("./backgrd.jpeg");
+            height: auto;
+            width: 100%;
+            background-size: cover;
+            z-index: 1;
+        }
+
+        .header {
+            height: 60px;
+            position: fixed;
+            width: 100%;
+            line-height: 60px;
+            z-index: 2;
+        }
+
+        .header2 {
+            height: 350px;
+        }
+
+        .header_name {
+            color: #ffa500;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: absolute;
+            left: 30px;
+        }
+
+        .header_list {
+            width: 100%;
+            height: auto;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .text {
+            position: relative;
+            display: grid;
+            width: 100%;
+            overflow: hidden;
+            top: 60px;
+            flex-direction: column;
+        }
+
+        .desc {
+            position: relative;
+            /* text-align: center; */
+            left: 200px;
+            font-size: 2em;
+            margin-top: 180px;
+            line-height: 50px;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 7px;
+        }
+
+        .btn {
+            position: relative;
+            text-align: center;
+            font-size: 1.4em;
+            margin-top: 100px;
+            left: 200px;
+            color: white;
+            font-family: system-ui;
+            letter-spacing: 5px;
+            border: 2px solid white;
+            width: 200px;
+            padding: 10px 15px;
+            border-radius: 50px;
+        }
+
+        .btn:hover {
+            background: rgb(255, 174, 0);
+        }
+
+        .iphone6 {
+            position: relative;
+            left: 1000px;
+            top: -340px;
+        }
+
+        h2 {
+            color: black;
+        }
+
+        .names {
+            position: absolute;
+            right: 150px;
+            display: inline-flex;
+            flex-direction: row;
+            font-family: system-ui;
+        }
+
+        h2 {
+            margin: 0px 10px;
+            font-size: 1.1em;
+        }
+
+        h2 a {
+            color: black;
+        }
+
+        h2 a:hover {
+            color: rgb(252, 187, 67);
+        }
+
+        /* .feat {
+            position: relative;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } */
+        .feat{
+            position: relative;
+            height: 130vh;
+            width: 100%;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+        }
+        .feat .head {
+            position: relative;
+            font-size: 3em;
+            top: 120px;
+            letter-spacing: 5px;
+        }
+
+        .feat .small {
+            position: relative;
+            font-size: 1.3em;
+            top: 140px;
+            letter-spacing: 1px;
+        }
+
+        hr {
+            color: black;
+            position: relative;
+            width: 100px;
+            top: 180px;
+        }
+
+        .ip2 {
+            position: relative;
+            /* height: 700px; */
+            left: -400px;
+            top: 230px;
+        }
+
+        .ip2 .phone {
+            position: absolute;
+            left: -480px;
+            top: -40px;
+            height: 750px;
+        }
+
+        .ip2 .gif {
+            position: absolute;
+            height: 495px;
+            top: 113px;
+            left: -122px;
+        }
+
+        .third {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            /* justify-content:center ; */
+        }
+
+        .third img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        .third p {
+            z-index: 1;
+            position: absolute;
+            color: white;
+            font-size: 4em;
+            font-family: sans-serif;
+            letter-spacing: 6px;
+            line-height: 80px;
+            left: 100px;
+        }
+
+        .btn2 {
+            position: relative;
+            text-align: center;
+            font-size: 1.4em;
+            margin-top: 100px;
+            left: 100px;
+            color: white;
+            font-family: system-ui;
+            letter-spacing: 5px;
+            border: 2px solid white;
+            width: 200px;
+            padding: 10px 15px;
+            border-radius: 50px;
+            top: 100px;
+        }
+
+        .btn2:hover {
+            background: rgb(255, 174, 0);
+        }
+
+        .last {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            /* justify-content: center;  */
+            flex-direction: column;
+            background-color: #fdcc52;
+        }
+
+        .last .fst {
+            font-size: 4em;
+            top: 90px;
+            position: relative;
+            text-align: center;
+        }
+        .last .ctr{
+            font-size: 1.2em;
+            letter-spacing: 2px;
+            position: relative;
+            top: 115px;
+            text-align: center;
+        }
+        .last .form{
+            position: relative;
+            top: 190px;
+            font-size: 1em;
+            text-align: center;
+        }
+        .last .subscribe input{
+            position: relative;
+            top: 250px;
+            font-size: 1em;
+            left: 350px;
+            padding: 15px 60px;
+            background: none;
+            border: 2px solid white;
+            color: white;
+            border-radius: 30px;
+        }
+        .last .subscribe input:hover {
+            background: rgb(255, 174, 0);
+            border: 2px solid rgb(255, 174, 0);
+        }
+        .last .insta{
+            background: url(./instagram.png);
+            height: 80px;
+            width: 80px;
+            background-size: cover;
+            border-radius: 50%;
+            top: 280px;
+            position: relative;
+            border: 2px solid black;
+        }
+        footer{
+            padding: 25px 0;
+            text-align: center;
+            color: rgba(255,255,255,.3);
+            background-color: #222;
+        }
+        footer .lst{
+            display: inline-flex;
+            list-style: none;
+            color: rgba(255,255,255,.3);
+        }
+        footer .lst li{
+            margin: 5px 5px;
+        }
+        footer .lst li a{
+            color: rgba(255,255,255,.3);
+        }
+        footer .lst li a:hover{
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="header" id="header">
+                <h1 class="header_name">TAC CONNECT</h1>
+                <div class="names">
+                    <h2 class="store"><a href=#>STORE</a></h2>
+                    <h2 class="faqs"><a href=#>FAQS</a></h2>
+                    <h2 class="contact"><a href=#>CONTACT</a></h2>
+                    <h2 class="profile"><a href=#>PROFILE</a></h2>
+                </div>
+            </div>
+
+            <div class="text">
+                <div class="desc">
+                    New Age Of Connecting And <br> Communicating !
+                </div>
+                <a href=# class="btn">
+                    BUY NOW>
+                </a>
+            </div>
+            <img src="./iphone6.png" class="iphone6">
+        </div>
+        <div>
+            <div class="feat">
+                <p class="head">Unlimited Features, Unlimited Fun</p>
+                <p class="small">Check Out What You Can Do With This New Product</p>
+                <hr />
+                <div class="ip2">
+                    <img src="./ip2.png" class="phone"></img>
+                    <img src="./new.gif" class="gif"></img>
+                </div>
+            </div>
+        </div>
+        <div class="third">
+            <img src="./back.jpg">
+            <p>Stop Waiting. <br> Start Tapping.</p>
+            <a href=# class="btn2">
+                BUY NOW
+            </a>
+        </div>
+        <div class="last">
+            <p class="fst">We❤️ Connecting !</p>
+            <form action="/">
+                <div class="ctr">
+                    <p>To hear about our regular updates, offers and much more subscribe to our newsletter below !</p>
+                </div>
+                <div class="form"><input type="text" placeholder="Name" name="name"
+                        style="border: none; border-bottom-style: solid; border-bottom-width: 3px; border-color:#f00; background-color: #FACC2E; background:url(bg-pattern.png); text-align: center; padding: 10px;"
+                        size="25" required=""><br><br><input type="text" placeholder="Email Address" name="mail"
+                        style="border: none; border-bottom-style: solid; border-bottom-width: 3px; border-color:#f00; background-color: #FACC2E; background:url(bg-pattern.png); text-align: center; padding: 10px; "
+                        size="30" required=""><br><br><label><input type="checkbox" checked="checked" name="subscribe">
+                        Daily Newsletter</label></div>
+                <div class="subscribe"><input type="submit"
+                        value="Subscribe"></div>
+            </form>
+            <a class="insta" href="https://www.instagram.com/tacconnect.in/"></a>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <p>© Tac connect. All Rights Reserved.</p>
+                <ul class="lst">
+                    <li class="privacy"><a href="/privacy">Privacy</a></li>
+                    <li class="terms"><a href="/terms">Terms</a></li>
+                    <li class="help"><a href="/help">FAQS</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
